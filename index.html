@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <h1 class="app-title">GitHub App</h1>
+      </header>
+      <div class="content">
+        <div class="left">
+          <div class="card">
+            <h2>Fetch Repos By UserName</h2>
+            <form id="user-form">
+              <label>UserName</label>
+              <input type="text" id="username" />
+              <button type="submit">Get Repos</button>
+            </form>
+          </div>
+          <div class="card">
+            <div class="languages">
+              <button data-lang="html">Html</button>
+              <button data-lang="css">CSS</button>
+              <button data-lang="javascript">JS</button>
+              <button data-lang="c++">C++</button>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <p id="search-term">HTML</p>
+          <div id="repos">
+            <a href="#" class="repo-item">
+              <span> name of repo </span>
+              <span> 200 issues number </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
