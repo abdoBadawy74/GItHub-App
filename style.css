@@ -64,6 +64,7 @@ input {
   padding: 7px 0;
   font-size: 18px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .languages {
   padding: 10px;
@@ -83,6 +84,18 @@ input {
   margin: 7px 0;
 }
 .repo-item:hover {
-  transition: 0.3s;
+  transition: 0.2s;
   background-color: #000;
+}
+.error {
+  background-color: red;
+  color: #fff;
+  padding: 3px;
+  border-radius: 3px;
+}
+.true {
+  background-color: green;
+  color: #fff;
+  padding: 3px;
+  border-radius: 3px;
 }
