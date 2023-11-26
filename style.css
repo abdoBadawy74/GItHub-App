@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+:root {
+  --gray-color: #ccdad1;
+  --dark-blue: #0e0e55;
+}
+header {
+  background-color: var(--dark-blue);
+  padding: 40px 0;
+  text-align: center;
+}
+.app-title {
+  font-size: 40px;
+  background-color: var(--gray-color);
+  color: var(--dark-blue);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 5px;
+  box-shadow: 6px 5px 3px rgb(0, 0, 0);
+}
+.content {
+  padding: 10px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.left {
+  width: 30%;
+}
+.card {
+  border: 1px solid var(--dark-blue);
+  margin-bottom: 20px;
+}
+.card h2 {
+  background-color: var(--dark-blue);
+  color: #fff;
+  padding: 5px;
+}
+.card form {
+  padding: 15px;
+}
+label {
+  font-size: 16px;
+  display: block;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 7px 0;
+  font-size: 16px;
+  border: 1px solid var(--dark-blue);
+  outline: 0;
+  border-radius: 5px;
+}
+.btn-el {
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  color: #fff;
+  background-color: #000;
+  padding: 7px 0;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.languages {
+  padding: 10px;
+}
+.right {
+  width: 68%;
+}
+.repo-item {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background-color: var(--dark-blue);
+  font-size: 17px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 7px 0;
+}
+.repo-item:hover {
+  transition: 0.3s;
+  background-color: #000;
+}

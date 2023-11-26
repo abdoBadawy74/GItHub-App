@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -18,15 +28,16 @@
             <form id="user-form">
               <label>UserName</label>
               <input type="text" id="username" />
-              <button type="submit">Get Repos</button>
+              <button class="btn-el" type="submit">Get Repos</button>
             </form>
           </div>
           <div class="card">
             <div class="languages">
-              <button data-lang="html">Html</button>
-              <button data-lang="css">CSS</button>
-              <button data-lang="javascript">JS</button>
-              <button data-lang="c++">C++</button>
+              <button class="btn-el" data-lang="html">Html</button>
+              <button class="btn-el" data-lang="css">CSS</button>
+              <button class="btn-el" data-lang="javascript">JS</button>
+              <button class="btn-el" data-lang="c++">C++</button>
+              <button class="btn-el" data-lang="php">PHP</button>
             </div>
           </div>
         </div>
