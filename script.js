@@ -32,13 +32,20 @@ function getUserRepos(user) {
   fetch(apiUrl)
     .then((res) => res.json())
     .then((data) => displayRepos(data, user))
-    .catch((err) => alert("Something went Wrong"));
+    .catch(() => alert("Something went Wrong !"));
 }
 
 function displayRepos(repos, searchTerm) {
+  console.log(repos);
+  if (repos.length === 0) {
+    reposEl.innerHTML = "No Repos..!";
+    return;
+  }
   search_term.innerHTML = searchTerm;
   repos.forEach((repo) => {
-    reposEl.innerHTML += `<a href="#" class="repo-item">
+    let name = repo.owner.login + "/" + repo.name;
+
+    reposEl.innerHTML += `<a href="./repo.html?repo=${name}" class="repo-item">
                             <span>${repo.owner.login} / ${repo.name} </span>
                             <span>${
                               repo.open_issues_count > 0
@@ -47,4 +54,22 @@ function displayRepos(repos, searchTerm) {
                             }</span>
                         </a>`;
   });
+}
+
+languages.addEventListener("click", clickHandler);
+
+function clickHandler(e) {
+  let lang = e.target.getAttribute("data-lang");
+  if (lang) {
+    reposEl.innerHTML = "";
+    getLangRepo(lang);
+  }
+}
+
+function getLangRepo(lang) {
+  let apiUrl = "https://api.github.com/search/repositories?q=" + lang;
+  fetch(apiUrl)
+    .then((res) => res.json())
+    .then((data) => displayRepos(data.items, lang))
+    .catch((err) => alert("Something went Wrong"));
 }
